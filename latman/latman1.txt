@@ -1,0 +1,46 @@
+Konversi Hari Menjadi Tahun, Bulan, Minggu, dan Hari
+
+DEKLARASI
+    angka : array of string
+    bilangan : integer
+    n : integer
+    masuk : integer
+    tahun : integer
+    bulan : integer
+    minggu : integer
+    hari : integer
+
+FUNGSI Terbilang(bilangan) : string
+    n ← bilangan
+
+    IF 0 ≤ n ≤ 11 THEN
+        RETURN angka[n]
+
+    ELSE IF n < 20 THEN
+        RETURN Terbilang(n - 10) + " Belas"
+
+    ELSE IF n < 100 THEN
+        RETURN Terbilang(n // 10) + " Puluh " + Terbilang(n % 10)
+
+    ELSE
+        RETURN "Angka terlalu besar"
+    END IF
+END FUNGSI
+
+PROGRAM UTAMA
+    angka ← ["", "Satu", "Dua", "Tiga", "Empat", "Lima",
+             "Enam", "Tujuh", "Delapan", "Sembilan",
+             "Sepuluh", "Sebelas"]
+
+    INPUT masuk
+
+    tahun ← masuk // 365
+    bulan ← (masuk % 365) // 30
+    minggu ← ((masuk % 365) % 30) // 7
+    hari ← ((masuk % 365) % 30) % 7
+
+    OUTPUT masuk, " hari = ",
+           Terbilang(tahun), " tahun ",
+           Terbilang(bulan), " bulan ",
+           Terbilang(minggu), " minggu dan ",
+           Terbilang(hari), " hari"

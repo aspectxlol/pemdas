@@ -1,0 +1,30 @@
+Menghitung Jumlah Huruf Vokal dan Konsonan
+
+DEKLARASI
+    huruf_vokal : array of string
+    huruf_konsonan : array of string
+    text : string
+    h : string
+    jumlah : integer
+    jumlah_vokal : integer
+    jumlah_konsonan : integer
+
+PROGRAM UTAMA
+    huruf_vokal ← ["a", "i", "u", "e", "o"]
+    huruf_konsonan ← ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m",
+                      "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"]
+
+    INPUT text
+
+    UBAH text MENJADI HURUF KECIL
+    HAPUS SPASI DI AWAL DAN AKHIR text
+
+    jumlah_vokal ← 0
+    jumlah_konsonan ← 0
+
+    UNTUK setiap h DALAM huruf_vokal LAKUKAN
+        jumlah ← jumlah kemunculan h dalam text
+
+        JIKA jumlah > 0 MAKA
+            jumlah_vokal ← jumlah_vokal + jumlah
+       

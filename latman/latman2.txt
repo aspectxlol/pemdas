@@ -1,0 +1,55 @@
+Konversi Detik Menjadi Jam, Menit, dan Detik
+
+DEKLARASI
+    angka : array of string
+    bilangan : integer
+    n : integer
+    masuk : integer
+    jam : integer
+    menit : integer
+    detik : integer
+
+FUNGSI Terbilang(bilangan : integer) : string
+    n ← bilangan
+
+    IF 0 ≤ n ≤ 11 THEN
+        RETURN angka[n]
+
+    ELSE IF n < 20 THEN
+        RETURN Terbilang(n - 10) + " Belas"
+
+    ELSE IF n < 100 THEN
+        RETURN Terbilang(n // 10) + " Puluh " + Terbilang(n % 10)
+
+    ELSE IF n < 200 THEN
+        RETURN "Seratus " + Terbilang(n - 100)
+
+    ELSE IF n < 1000 THEN
+        RETURN Terbilang(n // 100) + " Ratus " + Terbilang(n % 100)
+
+    ELSE IF n < 2000 THEN
+        RETURN "Seribu " + Terbilang(n - 1000)
+
+    ELSE IF n < 1.000.000 THEN
+        RETURN Terbilang(n // 1000) + " Ribu " + Terbilang(n % 1000)
+
+    ELSE
+        RETURN "Angka terlalu besar"
+    END IF
+END FUNGSI
+
+PROGRAM UTAMA
+    angka ← ["", "Satu", "Dua", "Tiga", "Empat", "Lima",
+             "Enam", "Tujuh", "Delapan", "Sembilan",
+             "Sepuluh", "Sebelas"]
+
+    INPUT masuk
+
+    jam ← masuk // 3600
+    menit ← (masuk % 3600) // 60
+    detik ← (masuk % 3600) % 60
+
+    OUTPUT masuk, " detik = ",
+           Terbilang(jam), " jam ",
+           Terbilang(menit), " menit dan ",
+           Terbilang(detik), " detik"

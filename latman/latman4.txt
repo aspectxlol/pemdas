@@ -1,0 +1,14 @@
+Menghitung Jumlah Kata
+
+DEKLARASI
+    text : string
+    jumlah_kata : integer
+
+PROGRAM UTAMA
+    INPUT text
+
+    text ← text.strip()
+
+    jumlah_kata ← panjang(text.split(" "))
+
+    OUTPUT "Jumlah kata: ", jumlah_kata

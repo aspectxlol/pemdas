@@ -1,0 +1,25 @@
+Menghitung Jumlah Setiap Huruf
+
+DEKLARASI
+    text : string
+    huruf : array of string
+    h : string
+    jumlah : integer
+
+PROGRAM UTAMA
+    INPUT text
+
+    UBAH text MENJADI HURUF KECIL
+    HAPUS SPASI DI AWAL DAN AKHIR text
+
+    huruf ← ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j",
+             "k", "l", "m", "n", "o", "p", "q", "r", "s", "t",
+             "u", "v", "w", "x", "y", "z"]
+
+    UNTUK setiap h DALAM huruf LAKUKAN
+        jumlah ← jumlah kemunculan h dalam text
+
+        JIKA jumlah > 0 MAKA
+            OUTPUT h, ": ", jumlah
+        END IF
+    END UNTUK
