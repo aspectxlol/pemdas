@@ -8,6 +8,8 @@ vokal = {
 }
 jml_vokal = 0
 
+nilai = 100
+
 for c in list(s):
   if c in vokal:
     vokal[c] += 1
